@@ -1,0 +1,101 @@
+\input texinfo @c -*-texinfo -*-
+
+@c %**start of header
+@setfilename 3D_Viewer_manual
+@settitle 3D_Viewer_v2.0
+@c %**end of header
+
+@copying
+This tutorial is for the implementation of the 3D Viewer, version 2.0.
+A program for visualizing 3D wireframe models.
+
+
+Copyright @copyright{} 2023 hankmagg, boomergo, jacquelc.
+@end copying
+
+@titlepage
+@title 3D_Viewer_v2.0
+@subtitle A program for visualizing 3D wireframe models
+@author jacquelc, hankmagg, boomergo
+
+
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@ifnottex
+@node Top, Introduction
+@top 3D_Viewer_v2.0
+@insertcopying
+@end ifnottex
+
+
+@menu
+* Introduction :: 
+* Installation::
+* Visualization of models::
+* Settings::
+* Creating images::
+@end menu
+
+@node Introduction, Installation, Top
+@chapter Introduction
+This is the implementation of the education project of School21 - 3D Viewer. 
+
+The program provide the ability to:
+@enumerate
+@item Load a wireframe model from an obj file (vertices and surfaces list support only).
+@item Translate the model by a specified distance in relation to the X, Y, Z axes.
+@item Rotate the model by a specified angle relative to its X, Y, Z axes.
+@item Scale the model by a specified value.
+@item Customizing the type of projection (parallel and central).
+@item Setting the color, type and width of facet, color, display method and size of vertex.
+@item Background color selection.
+@item Saving captured (rendered) images as bmp and jpeg files.
+@end enumerate
+
+@node Installation
+@chapter Installation
+
+The installation is done with the console command 'make install'. 
+You must be in the 'src' directory of this project for the command to work. 
+The build will be placed in the 'build' directory created in 'src'.
+
+The uninstalling is done with the console command 'make uninstall'.
+
+@node Visualization of models
+@chapter Visualization of models
+
+The program allows you to upload 3d models in obj format. Visualization of only vertices and faces is supported. 
+To load a model click 'open' button and select the obj format file.
+
+After loading the model you can specify the distance to move the model (relative to the x, y, z axes), 
+the angle to rotate the model (relative to the x, y, z axes), or the value to scale the model.
+
+It is possible to rotate the model with mouse.
+
+@node Settings
+@chapter Settings
+
+After loading the model you can change: 
+@enumerate
+@item Type of projection (parallel and central).
+@item Color (black, yellow, purple), type (solid, dashed) and width (from 1 to 10) of facet
+@item Color (black, yellow, purple), display method (none, circle, square) and size (from 1 to 10) of vertex.
+@item Background color (black, white, green).
+@end enumerate
+
+To apply the settings click the 'apply settings' button.
+
+To change the settings to default click the 'default settings' button and apply the settings.
+
+The settings selected before closing the program will be saved and loaded the next time you start.
+
+@node Creating images
+@chapter Creating images
+
+To save the image select the format (bmp or jpeg) and click 'save image'. 
+The program will prompt you to enter a name for the image and choose extension.
+
+@bye
